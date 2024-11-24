@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="muhsin.css">                      
     <title>City Care Hospital</title>
     <style>
-        /* CSS Styles */
+        /* General Styles */
         body {
             margin: 0;
             padding: 0;
@@ -55,6 +55,7 @@
             margin-bottom: 20px;
         }
 
+        /* Drug Checker Section */
         .drug-checker {
             background-color: white;
             padding: 30px;
@@ -93,6 +94,28 @@
             font-size: 18px;
         }
 
+        /* Total Patient Section */
+        .stats {
+            margin: 50px auto;
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .stats h1, .stats h2, .stats h3, .stats h4 {
+            color: #008080;
+        }
+
+        .stats p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Sticky Footer */
         footer {
             background-color: #008080;
             color: white;
@@ -101,12 +124,22 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+            z-index: 1000;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-
+    <!-- Header -->
     <header>
         <div class="left-menu">
             <h2>Home</h2>
@@ -120,7 +153,7 @@
         </div>
     </header>
 
-    
+    <!-- Main Content -->
     <div class="main-content">
         <h1>Welcome to Online Patient Appointment</h1>
         <p>
@@ -134,7 +167,7 @@
             name of the drug below to see if it's available in our pharmacy.
         </p>
 
-        
+        <!-- Drug Checker -->
         <div class="drug-checker">
             <h2>Check Drug Availability</h2>
             <input type="text" id="drugName" placeholder="Enter drug name" />
@@ -142,24 +175,26 @@
             <div class="result" id="result"></div>
         </div>
     </div>
-    <div>
-      <H1>Total patient</H1>
-      <p>My twin and I met in 2015 (at the time neither of us had any idea about twin flames). PS - I am 1000% positive she is my twin flame and I am sure she is as well. Both recently separated. It was like being shot out of a cannon. Super similar stories, both meeting in their early 40’s, each with two kids ect….The magic while together was unreal. I could literally write a hundred books about that magic. I knew the moment I met her the connection was different. Her, it may have taken a tad longer as she was also seeing others while I was not over the first few months, but I was patient. The next few years were unreal, so many wonderful moments. Then the pandemic hits. My ex wife is severely immuno compromised and after a few months of trying to navigate what to do, I secretly move back in with her so she can see her kids daily. She was a total wreck day in and day out, terrified. I hid this from my twin who knew only that I had to shelter in place. We both thought it would last a few months so we braved through it. Then as the pandemic marched on, I was stuck. I love my ex wife like a sister, but I had no real exit plan, it was all for the kids who she needed and they needed her too. In Aug 2021, my twin couldn’t handle it anymore and broke it off. I never told her the truth about where I really was and why and completely regret every second of it. The fact she broke it off sent me into a complete tailspin. It was a few months later I stumbled on the twin flame Community and knew instantly we were. But at that point I couldn’t bring it up to her or fess up to my deceit either. I was stuck and consumed by thoughts of her every moment without a path or understanding what I should do. Fast forward to Feb 2022 and she began dating. I felt this more than I saw this and knew this person would hurt her. He did and I was there on Valentine’s Day to pick up the pieces. Still, at that point in time the pandemic raged on so I needed to buy time. I wanted to be with her desperately and couldn’t bare the thought of someone else with her or hurting her. She is the queen of curiosity and I am the king of patience. We grounded each other in every single way. I lost my reasoning and lost my mind and doubled down on a huge lie and concocted a story that I had cancer. It served to keep her close and buy me time. I knew what I was doing but I also didn’t at the same time. Fast forward again to November 2022. She found out everything. I was a complete coward. I couldn’t even believe it was even me at the end of the day…</p>
-       <h2>Total doctors</h2>
-       <p>we have alot of doctors in Online Patient Appointment hospital </p>
-       <h3>Total Appointment</h3>
-       <p></p>
-       <h4>Total hospital</h4>
-       <p></p>
+
+    <!-- Statistics Section -->
+    <div class="stats">
+        <h1>Total Patients</h1>
+        <p>We have served over 10,000 patients since our inception, offering quality healthcare services every day.</p>
+        <h2>Total Doctors</h2>
+        <p>Our team of highly qualified professionals ensures the best care for all your needs.</p>
+        <h3>Total Appointments</h3>
+        <p>Effortlessly book appointments online to save time and avoid long queues.</p>
+        <h4>Total Hospitals</h4>
+        <p>City Care Hospital is part of a nationwide chain, ensuring top-notch care wherever you are.</p>
     </div>
 
     <!-- Footer -->
     <footer>
-        &copy; 2024 online patient Appointment. All Rights Reserved.
+        &copy; 2024 City Care Hospital. All Rights Reserved. | <a href="#top">Back to Top</a>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // List of available drugs
         const availableDrugs = [
             "Dummy Tablet", 
             "Panadol", 
@@ -168,10 +203,9 @@
             "Pain Killer", 
             "Rizek 40mg", 
             "Omega Tablet",
-            "parastamol tablet",
+            "Paracetamol Tablet",
         ];
 
-        // Function to check drug availability
         function checkDrug() {
             const drugInput = document.getElementById("drugName").value.trim().toLowerCase();
             const resultDiv = document.getElementById("result");
@@ -183,7 +217,6 @@
             }
         }
     </script>
-
 </body>
 </html>
 
